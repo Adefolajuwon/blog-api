@@ -5,6 +5,7 @@ const { comment } = require('../controllers/commentControllers');
 const { blog } = require('../controllers/blogControllers');
 const router = express.Router();
 
-router.post('/autor', author);
+router.post('/author', author);
 router.post('/blog', blog);
 router.post('/comment', comment);
+module.exports = router;

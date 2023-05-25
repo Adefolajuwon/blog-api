@@ -1,9 +1,9 @@
 const http = require('http');
-const app = require('./index');
+const app = require('.');
 
 const { startMongoose } = require('./lib/mongoose');
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 const server = http.createServer(app);
 
 (async function () {

@@ -7,6 +7,7 @@ async function author(req, res) {
 		res.status(201).json(author);
 	} catch (error) {
 		res.status(500).json({ error: 'Failed to create author' });
+		console.log(error);
 	}
 }
 module.exports = { author };

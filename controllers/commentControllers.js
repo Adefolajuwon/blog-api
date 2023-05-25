@@ -7,6 +7,7 @@ async function comment(req, res) {
 		res.status(201).json(comment);
 	} catch (error) {
 		res.status(500).json({ error: 'Failed to create comment' });
+		console.log(error);
 	}
 }
 module.exports = { comment };

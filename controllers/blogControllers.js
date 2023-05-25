@@ -6,6 +6,7 @@ async function blog(req, res) {
 		res.status(201).json(blog);
 	} catch (error) {
 		res.status(500).json({ error: 'Failed to create blog' });
+		console.log(error);
 	}
 }
 module.exports = { blog };

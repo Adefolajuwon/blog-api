@@ -1,11 +1,9 @@
-const 
-
-async function author(req, res) {
+async function comment(req, res) {
 	try {
-		const { fullName, email } = req.body;
-		const author = await Author.create({ fullName, email });
-		res.status(201).json(author);
+		const { blogId, userInfo } = req.body;
+		const comment = await Comment.create({ blog: blogId, userInfo });
+		res.status(201).json(comment);
 	} catch (error) {
-		res.status(500).json({ error: 'Failed to create author' });
+		res.status(500).json({ error: 'Failed to create comment' });
 	}
 }

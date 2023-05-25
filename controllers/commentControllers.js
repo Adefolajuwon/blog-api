@@ -1,3 +1,5 @@
+const Comment = require('../models/comment');
+
 async function comment(req, res) {
 	try {
 		const { blogId, userInfo } = req.body;
@@ -7,3 +9,4 @@ async function comment(req, res) {
 		res.status(500).json({ error: 'Failed to create comment' });
 	}
 }
+module.exports = { comment };

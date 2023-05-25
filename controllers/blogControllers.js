@@ -1,3 +1,4 @@
+const Blog = require('../models/blog');
 async function blog(req, res) {
 	try {
 		const { title, content, authorId } = req.body;
@@ -7,3 +8,4 @@ async function blog(req, res) {
 		res.status(500).json({ error: 'Failed to create blog' });
 	}
 }
+module.exports = { blog };

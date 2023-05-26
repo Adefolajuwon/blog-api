@@ -10,4 +10,5 @@ async function comment(req, res) {
 		console.log(error);
 	}
 }
+
 module.exports = { comment };

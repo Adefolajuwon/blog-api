@@ -6,7 +6,7 @@ async function author(req, res) {
 		const author = await Author.create({ fullName, email });
 		res.status(201).json(author);
 	} catch (error) {
-		res.status(500).json({ error: 'Failed to create author' });
+		res.status(500).json({ error: 'Unable create author' });
 		console.log(error);
 	}
 }

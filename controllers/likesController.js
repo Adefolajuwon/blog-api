@@ -4,15 +4,15 @@ const Blog = require('../models/blog');
 
 async function newLike(req, res) {
 	try {
-		const blogId = req.params.id;
-		const blog = await Blog.findById(blogId);
+		const id = req.params.id;
+		const blog = await Blog.findById(id);
 
 		if (!blog) {
 			return res.status(404).json({ error: 'Blog not found' });
 		}
 
 		// Create a new Like document
-		const like = await Like.create({ blog: blogId });
+		const like = await Like.create({ blog: id });
 
 		// Update the blog's likes count
 		blog.likes += 1;

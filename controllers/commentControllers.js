@@ -2,9 +2,9 @@ const Comment = require('../models/comment');
 
 async function comment(req, res) {
 	try {
-		const { blogId, userInfo } = req.body;
-		const comment = await Comment.create({ blog: blogId, userInfo });
-		res.status(201).json(comment);
+		const { blogId, userInfo, comment } = req.body;
+		const Comments = await Comment.create({ blog: blogId, userInfo, comment });
+		res.status(201).json(Comments);
 	} catch (error) {
 		res.status(500).json({ error: 'Failed to create comment' });
 		console.log(error);

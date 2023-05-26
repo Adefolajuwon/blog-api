@@ -16,18 +16,18 @@ async function blog(req, res) {
 		const { title, content, authors } = req.body;
 
 		// Check if all author IDs are valid
-		const authorIds = await Author.find({ _id: { $in: authors } }).distinct(
-			'_id'
-		);
-		const invalidAuthors = authors.filter(
-			(authorId) => !authorIds.includes(authorId)
-		);
+		// const authorIds = await Author.find({ _id: { $in: authors } }).distinct(
+		// 	'_id'
+		// );
+		// const invalidAuthors = authors.filter(
+		// 	(authorId) => !authorIds.includes(authorId)
+		// );
 
-		if (invalidAuthors.length > 0) {
-			return res
-				.status(400)
-				.json({ error: 'Invalid author IDs: ' + invalidAuthors.join(', ') });
-		}
+		// if (invalidAuthors.length > 0) {
+		// 	return res
+		// 		.status(400)
+		// 		.json({ error: 'Invalid author IDs: ' + invalidAuthors.join(', ') });
+		// }
 
 		// Create the blog with the provided data
 		const blog = await Blog.create({ title, content, authors });
@@ -35,6 +35,7 @@ async function blog(req, res) {
 		res.status(201).json(blog);
 	} catch (error) {
 		res.status(500).json({ error: 'Unable to create blog' });
+		console.log(error);
 	}
 }
 async function ViewCount(req, res) {

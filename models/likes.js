@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const likesSchema = new mongoose.Schema({
+const likeSchema = new mongoose.Schema({
 	title: { type: String, required: true },
 	content: { type: String, required: true },
 	author: {
@@ -11,4 +11,4 @@ const likesSchema = new mongoose.Schema({
 	likes: { type: Number, default: 0 }, // Add a "likes" field to track the number of likes
 });
 
-module.exports = mongoose.model('Like', likesSchema);
+module.exports = mongoose.model('Like', likeSchema);

@@ -10,7 +10,8 @@ To set up the Blogging Application locally, follow these steps:
 4. Install the project dependencies by running the following command:npm install
 
 5. Create a .env file and add the necessary environment variables.
-
+   MONGODB_URI = 'mongodb+srv://juwon:tremothegoat@cluster0.lary7db.mongodb.net/?retryWrites=true&w=majorit'
+   SERVER = 'https://dashboard.render.com/web/srv-chovd4e7avjb90gq7nqg/deploys/dep-chovd4u7avjb90gq7obg'
 6. To start the application, run the following command in the project directory: npm start
 
 API endpoints

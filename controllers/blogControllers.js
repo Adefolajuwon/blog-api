@@ -40,7 +40,7 @@ async function blog(req, res) {
 }
 async function ViewCount(req, res) {
 	try {
-		const blogId = req.params.id;
+		const blogId = req.body.id;
 
 		// Find the blog by its ID
 		const blog = await Blog.findById(blogId);

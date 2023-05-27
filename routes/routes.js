@@ -13,8 +13,8 @@ router.post('/author', author);
 router.post('/blog', blog);
 //comment route
 router.post('/comment', comment);
-
-router.get('/blog/:id/like', newLike);
+//like route
+router.post('/blog/:id/like', newLike);
 // views route
-router.get('/blog/views', ViewCount);
+router.get('/blog/:id/views', ViewCount);
 module.exports = router;

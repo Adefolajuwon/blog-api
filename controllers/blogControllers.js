@@ -24,7 +24,7 @@ async function blog(req, res) {
 }
 async function ViewCount(req, res) {
 	try {
-		const id = req.body.id;
+		const id = req.params.id;
 
 		// Find the blog by its ID
 		const blog = await Blog.findById(id);
@@ -38,8 +38,10 @@ async function ViewCount(req, res) {
 
 			res.json({ views: blog.views });
 		}
+		console.log(id);
 	} catch (error) {
 		res.status(500).json({ error: 'Unable to increase view count' });
+		console.log(error);
 	}
 }
 module.exports = { blog, ViewCount };

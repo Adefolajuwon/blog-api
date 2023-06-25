@@ -4,7 +4,7 @@ const { author } = require('../controllers/authorControllers');
 const { comment } = require('../controllers/commentControllers');
 const { blog, ViewCount } = require('../controllers/blogControllers');
 const { newLike } = require('../controllers/likesController');
-
+const { createProfile } = require('../controllers/profileController');
 const router = express.Router();
 
 // author route
@@ -17,4 +17,5 @@ router.post('/comment', comment);
 router.post('/blog/:id/like', newLike);
 // views route
 router.get('/blog/:id/views', ViewCount);
+router.post('/profile', createProfile);
 module.exports = router;

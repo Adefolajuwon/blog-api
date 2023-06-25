@@ -12,7 +12,7 @@ const bodyParser = require('body-parser');
 // app.use(express.json()); // Add this line to parse JSON bodies
 
 // app.use('/api', routes);
-app.use('/api', bodyParser.json()); // Parse JSON bodies
+// app.use('/api', bodyParser.json()); // Parse JSON bodies
 app.use('/api', routes);
 
 module.exports = app;

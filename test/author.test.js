@@ -6,7 +6,7 @@ describe('author', () => {});
 
 test('should create a new author', async () => {
 	const fullName = 'John Doe';
-	const email = 'johndoe@example.com';
+	const email = 'johndoe@examplee.com';
 
 	const response = await request(app).post('/author').send({ fullName, email });
 

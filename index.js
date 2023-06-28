@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 // 	console.log(req.body); // log the request body
 // 	next();
 // });
-// app.use(express.json()); // Add this line to parse JSON bodies
+// app.use(exprgess.json()); // Add this line to parse JSON bodies
 
 // app.use('/api', routes);
 // app.use('/api', bodyParser.json()); // Parse JSON bodies

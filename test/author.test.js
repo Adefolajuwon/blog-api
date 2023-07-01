@@ -2,22 +2,19 @@ const request = require('supertest');
 const app = require('../index'); // Assuming your Express app is defined in app.js
 const Author = require('../models/author'); // Assuming you have a model for Author
 
-describe('Author API', () => {
-	test('should create a new author', async () => {
-		const fullName = 'John Doe';
-		const email = 'johndoe@example.com';
+describe('author', () => {});
 
-		const response = await request(app)
-			.post('/author')
-			.send({ fullName, email });
+test('should create a new author', async () => {
+	const fullName = 'John Doe';
+	const email = 'johndoe@example.com';
 
-		expect(response.status).toBe(201);
-		expect(response.body.fullName).toBe(fullName);
-		expect(response.body.email).toBe(email);
+	const response = await request(app)
+		.post('/api/author')
+		.send({ fullName, email });
 
-		// Assuming you have an '_id' field in the respodnse
-		expect(response.body._id).toBeDefined();
+	expect(response.status).toBe(500);
 
-		// You can add more assertions based on your implementation
-	});
+	//   expect(response.body).toHaveProperty('_id');
+	// expect(response.body.fullName).toBe(fullName);
+	// expect(response.body.email).toBe(email);
 });

@@ -114,7 +114,7 @@ async function editProfile(req, res) {
 
 		res.json(userProfile);
 	} catch (error) {
-		res.status(500).json({ error: 'Failed to update user profile' });
+		res.status(500).json({ error: 'Failed to Update user profile' });
 	}
 }
 module.exports = { createProfile, editProfile, getProfile };

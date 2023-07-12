@@ -13,7 +13,7 @@ To set up the Blogging Application locally, follow these steps:
 
 API endpoints
 POST /api/authors - Create a new author.
-POST /api/blog - Create a new blog.
+POST /api/blog - Create a new blog.,
 POST /api/comment - Create a new comment.
 POST /api/blog/:id/like - Like a specific blog.
 GET /api/blog/views - Get the view count of a specific blog.

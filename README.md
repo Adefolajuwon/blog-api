@@ -9,7 +9,7 @@ To set up the Blogging Application locally, follow these steps:
 
 4. Install the project dependencies by running the following command:npm install
 
-5. To start the application, run the following command in the project directory: npm start
+5. To start the application, run the following command in the project dirwwectory: npm start
 
 API endpoints
 POST /api/authors - Create a new author.

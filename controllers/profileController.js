@@ -106,7 +106,7 @@ async function editProfile(req, res) {
 			return res.status(400).json({ error: 'Invalid password' });
 		}
 
-		// Update the user profile
+		// Update the user profile.
 		userProfile.name = name;
 		userProfile.age = age;
 		userProfile.email = email;
